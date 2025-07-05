@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DevRev Plug Chat Widget Test</title>
+</head>
+<body>
+  <h1>Welcome to DevRev Plug Chat Widget Test</h1>
+  <p>This is a simple page to verify the DevRev chat widget integration.</p>
+
+  <!-- Replace this script with the actual one from DevRev -->
+  <script>
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://plug.devrev.ai/plug.js";  // Example URL, update with real one if needed
+      js.async = true;
+      js.onload = function() {
+        window.devrevPlug.init({
+          org_id: 'your_org_id',  // Replace with your org ID
+          workspace_id: 'your_workspace_id',  // Optional
+          // Additional config options as required
+        });
+      };
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'devrev-plug'));
+  </script>
+
+</body>
+</html>
